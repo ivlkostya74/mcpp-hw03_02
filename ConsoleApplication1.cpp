@@ -11,11 +11,15 @@
 class Counter {
 private:
     int count=0;
+    Counter(int count) {
+       this->count=count;
+    }
+
 public:
     Counter()
 
     {
-        this->count = count;
+        //this->count = count;
 
     }
     int counterPlas() {
