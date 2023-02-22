@@ -11,16 +11,15 @@
 class Counter {
 private:
     int count=0;
-    Counter(int count) {
-       this->count=count;
-    }
+   
 
 public:
     Counter()
-
-    {
+      {
         //this->count = count;
-
+            }
+    Counter(int count) {
+        this->count = count;
     }
     int counterPlas() {
         return count ++;
@@ -43,7 +42,7 @@ int main()
 {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
-    Counter count;
+   
     //setlocale(LC_ALL, "Russian");
     std::string Str;
     std::cout << "Вы хотите указать начальное значение счётчика? Введите да или нет:\n";
@@ -53,7 +52,9 @@ int main()
     if (Str=="да") {
         std::cout << "Введите начальное значение счётчика:\n";
         std::cin >> num;
+        Counter count;
         count.setCounter(num);
+
     }
    
 
