@@ -30,9 +30,9 @@ public:
     void prinCounter() {
         std::cout << "Текущее значение счетчика:" << count << std::endl;
     }
-    void setCounter(int num) {
+    /*void setCounter(int num) {
         count = num;
-    }
+    }*/
 
 };
 
@@ -48,15 +48,15 @@ int main()
     std::cout << "Вы хотите указать начальное значение счётчика? Введите да или нет:\n";
     std::cin >> Str;
     std::cout << Str;
-    int num;
+    int num=0;
+   
     if (Str=="да") {
         std::cout << "Введите начальное значение счётчика:\n";
         std::cin >> num;
-        Counter count;
-        count.setCounter(num);
+       Counter count(num);
 
     }
-   
+    Counter count(num);
 
     while (Str.compare("х")) {
         std::cout << "Введите команду ('+', '-', '=' или 'x'):\n";
